@@ -1,0 +1,33 @@
+package com.flower.hot.model.xq;
+
+import javax.persistence.*;
+@Entity
+@Table(name="Room")
+public class RoomModel {
+	@Id
+	private int roomno=0;
+	private String roomaddr=null;
+	@Column(name="rarea")
+	private int area=0;
+	public int getRoomno() {
+		return roomno;
+	}
+	public void setRoomno(int roomno) {
+		this.roomno = roomno;
+	}
+	public String getRoomaddr() {
+		return roomaddr;
+	}
+	public void setRoomaddr(String roomaddr) {
+		this.roomaddr = roomaddr;
+	}
+	public int getArea() {
+		return area;
+	}
+	public void setArea(int area) {
+		this.area = area;
+	}
+	
+	
+
+}

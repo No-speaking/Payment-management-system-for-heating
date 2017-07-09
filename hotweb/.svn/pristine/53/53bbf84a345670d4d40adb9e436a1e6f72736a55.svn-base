@@ -1,0 +1,41 @@
+					
+<div><h4 align="left" >房屋管理</h4><div align="right">
+									<a href="#" class="btn btn-secondary btn-sm btn-icon icon-left">
+										增加
+									</a>
+									<a href="#" class="btn btn-secondary btn-sm btn-icon icon-left">
+										修改
+									</a>
+									<a href="#" class="btn btn-danger btn-sm btn-icon icon-left">
+										删除
+									</a>
+									<a href="#" class="btn btn-info btn-sm btn-icon icon-left">
+										查看
+									</a></div></div>
+					<table class="table table-bordered table-striped" id="example-2">
+						<thead>
+							<tr>
+								<th class="no-sorting">
+									<input type="checkbox" class="cbr">
+								</th>
+								<th>房屋编号</th>
+								<th>房屋地址</th>
+								<th>房屋面积</th>
+							</tr>
+						</thead>
+						
+						<tbody class="middle-align">
+						
+							<tr>
+								<td>
+									<input type="checkbox" class="cbr">
+								</td>
+								<td>jh </td>
+								<td>8.7</td>
+								<td>Social and human service</td>
+							</tr>
+							
+							
+							
+						</tbody>
+					</table>

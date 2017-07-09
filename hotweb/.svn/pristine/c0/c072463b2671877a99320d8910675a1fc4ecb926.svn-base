@@ -1,0 +1,43 @@
+<script src="../zmm/main.js"></script>		
+<div><h4 align="left" >优惠信息</h4><div align="right">
+<a href="#" class="btn btn-secondary btn-sm btn-icon icon-left" id="youhuiadd">
+										增加
+									</a><a href="#" class="btn btn-secondary btn-sm btn-icon icon-left" id="youhuimodify">
+										修改
+									</a>
+									<a href="#" class="btn btn-danger btn-sm btn-icon icon-left" id="youhuidel">
+										删除
+									</a>
+									<a href="#" class="btn btn-info btn-sm btn-icon icon-left" id="youhuilook">
+										查看
+									</a></div></div>
+	
+	<table class="table table-bordered table-striped" id="example-2">
+						<thead>
+							<tr>
+								
+								<th>优惠编号</th>
+								<th>折扣</th>
+								<th>描述</th>
+								
+							</tr>
+						</thead>
+						
+						<tbody class="middle-align">
+						
+							
+							
+							
+							
+						</tbody>
+					</table>
+					
+					
+					
+	<div id="addyouhui">
+		
+	
+	
+	
+	
+	</div>

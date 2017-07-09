@@ -1,0 +1,42 @@
+package com.flower.hot.controller.zmm;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.flower.hot.model.zmm.YouhuiModel;
+import com.flower.hot.result.zmm.ResultJson;
+import com.flower.hot.service.zmm.IYouhuiService;
+
+
+
+@RestController
+@RequestMapping("/youhui")
+public class YouhuiController {
+private IYouhuiService ys=null;
+	
+	@Autowired
+	public void setYs(IYouhuiService ys) {
+		this.ys = ys;
+	}
+
+	@RequestMapping("/add")
+	public ResultJson add(YouhuiModel ym) throws Exception
+	{
+		ResultJson result=new ResultJson();
+		ys.add(ym);
+		result.setResult("Y");
+		
+		return result;
+	}
+	@RequestMapping("/modify")
+	public ResultJson modify(YouhuiModel ym) throws Exception
+	{
+		ResultJson result=new ResultJson();
+		ys.add(ym);
+		result.setResult("Y");
+		
+		return result;
+	}
+
+}

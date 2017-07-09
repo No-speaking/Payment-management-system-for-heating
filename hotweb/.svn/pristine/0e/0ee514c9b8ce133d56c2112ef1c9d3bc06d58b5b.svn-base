@@ -1,0 +1,56 @@
+
+$(document).ready(function(){
+	
+	function showlist(){
+		$.getJSON("../youhui/get/all.mvc",function(data){
+			
+			var showinfo="";
+			
+			for(var i=0;i<data.length;i++){
+				
+				showinfo=showinfo+"<tr><td>"+data[i].youid+"</td><td>"+data[i].zhekou+"</td><td>"+data[i].descrip+"</td></tr>";
+			}
+			
+			$("table#example-2 tbody").html(showinfo);
+			
+			
+			
+		});
+	}
+	//增加按钮点击
+	$("#youhuiadd").on("click",function(){
+		$("div#addyouhui").load("../zmm/add.html",function(){
+			$("div#addyouhui").dialog({
+				
+				title:"增加优惠",
+				width:500,
+				height:280
+		
+				
+			});
+		});
+		
+	});
+	//修改按钮点击
+	$("a#youhuimodify").on("click",function(){
+		
+		
+	});
+	//删除按钮点击
+	$("a#youhuidel").on("click",function(){
+		
+		
+	});
+	//查看按钮点击
+	$("a#youhuilook").on("click",function(){
+		
+		
+	});
+	
+	showlist();
+	
+	
+	
+	
+	
+});

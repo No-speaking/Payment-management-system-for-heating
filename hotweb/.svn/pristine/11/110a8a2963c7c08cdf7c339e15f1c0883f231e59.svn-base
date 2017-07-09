@@ -1,0 +1,23 @@
+package com.flower.hot.controller.xq;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.flower.hot.model.xq.RoomModel;
+import com.flower.hot.result.zmm.ResultJson;
+import com.flower.hot.service.xq.IRoomService;
+@Controller
+@RequestMapping("/Room")
+public class RoomController {
+	
+	private IRoomService rs=null;
+	
+	public ResultJson add(RoomModel rm)throws Exception{
+		
+		ResultJson result=new ResultJson();
+		rs.add(rm);
+		result.setResult("Y");
+		return result;
+	}
+
+}

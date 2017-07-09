@@ -1,0 +1,23 @@
+
+$(document).ready(function(){
+	
+	function showlist(){
+		alert("aa");
+		$.getJSON("../Room/getList.mvc",function(data){
+			alert(date);
+			var showinfo="";
+			for(var i=0;i<data.length;i++){
+				
+				showinfo=showinfo+"<tr><td>"+data[i].roomno+"</td><td>"+data[i].roomaddr+"</td></tr>";
+				
+				 
+			}
+			
+			$("table#example-2 tbody").html(showinfo);
+			
+		});
+		
+	}
+	showlist();
+	
+});

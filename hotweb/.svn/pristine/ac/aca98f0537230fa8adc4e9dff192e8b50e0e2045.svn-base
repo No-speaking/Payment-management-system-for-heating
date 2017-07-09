@@ -1,0 +1,33 @@
+
+$(document).ready(function(){
+	
+	function showlist(){
+		
+		$.getJSON("../Room/getList.mvc",function(data){
+			
+			var showinfo="";
+			for(var i=0;i<data.length;i++){
+				
+				showinfo=showinfo+"<tr><td>"+data[i].roomno+"</td><td>"+data[i].roomaddr+"</td></tr>";
+				
+				 
+			}
+			
+			$("table#example-2 tbody").html(showinfo);
+			
+		});
+		
+	}
+	
+	$("#roomadd").on("click",function(){ $("div#roomdialog").load("../xq/addRoom.html",function(){
+		
+		$("div#roomdialog").dialog();
+		
+	}); });
+	$("a#roommodify").on("click",function(){});
+	$("a#roomdelete").on("click",function(){});
+	$("a#roomlist").on("click",function(){});
+	
+	showlist();
+	
+});

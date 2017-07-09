@@ -1,0 +1,5 @@
+package com.flower.hot.model.dx;
+
+public class IdentityModel {
+
+}

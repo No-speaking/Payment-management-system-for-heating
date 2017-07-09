@@ -1,0 +1,43 @@
+<div class="row">
+            <div class="col-md-12">
+                
+                <form name="sentMessage" id="wxxxModifyForm" method="post" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>维修编号:</label>
+                            <span type="text" class="form-control" name="wno" ></span>
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>问题描述:</label>
+                            <span type="text" class="form-control" name="wtms" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+                     <div class="control-group form-group">
+                        <div class="controls">
+                            <label>提交时间:</label>
+                            <span type="text" class="form-control" name="tdate" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+               
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>维修人员人数:</label>
+                            <span class="form-control" name="wnumber"/>
+                        </div>
+                    </div>
+                      <div class="control-group form-group">
+                        <div class="controls">
+                            <label>维修地点:</label>
+                            <span class="form-control" name="waddr"/>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    
+                </form>
+            </div>
+
+        </div>

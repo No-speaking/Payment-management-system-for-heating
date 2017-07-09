@@ -1,0 +1,31 @@
+package com.flower.hot.controller.dx;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.flower.hot.model.dx.IdentityModel;
+import com.flower.hot.result.zmm.ResultJson;
+import com.flower.hot.service.dx.IIdentityService;
+import com.flower.hot.service.zmm.IYouhuiService;
+
+@RestController
+@RequestMapping("/Identity")
+public class IdentityController {
+private IIdentityService is=null;
+	
+	@Autowired
+	public void setIs(IYouhuiService Is) {
+		this.is = is;
+	}
+
+
+	public ResultJson add(IdentityModel im)throws Exception{
+		
+		ResultJson result=new ResultJson();
+		is.add(im);
+		result.setResult("Y");
+		return result;
+	}
+
+}

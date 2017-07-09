@@ -1,0 +1,34 @@
+
+
+$(document).ready(function(){
+	
+	function showlist(){
+		$.getJSON("../Identity/get/all.mvc",function(data){
+			alert("q");
+			var showinfo="";
+			alert(date);
+			for(var i=0;i<data.length;i++){
+				
+				showinfo=showinfo+"<tr><td>"+data[i].idname+"</td></tr>";
+			}
+			
+			$("table#example-2 tbody").html(showinfo);
+			
+			
+			
+		});
+	}
+	
+	$("#identityadd").on("click",function(){
+		$("div#indentitydialog").load("..dx/addidentity.html")
+	});
+	$("a#identitymodify").on("click",function(){});
+	$("a#identitydelete").on("click",function(){});
+	$("a#identitylist").on("click",function(){});
+	showlist();
+	
+	
+	
+	
+	
+});

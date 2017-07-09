@@ -1,0 +1,25 @@
+
+<div class="row">
+            <div class="col-md-12">
+
+                <form name="sentMessage" id="identitymodifyFrom" action="../Identity/modify.mvc" method="post" novalidate>
+                
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>权限信息</label>
+                            <input type="text" class="form-control" id="name" name="idname">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+
+                    
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    
+                    <button type="submit" class="btn btn-primary">提交</button>
+                    <button type="button" class="btn btn-primary">取消</button>
+                </form>
+            </div>
+
+        </div>
+

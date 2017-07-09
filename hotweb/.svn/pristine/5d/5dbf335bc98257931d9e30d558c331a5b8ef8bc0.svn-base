@@ -1,0 +1,32 @@
+<script src="../xq_user/main.js"></script>					
+
+<div><h4 align="left" >用户管理</h4><div align="right">
+									<a href="#" id="useradd" class="btn btn-secondary btn-sm btn-icon icon-left">
+										增加
+									</a>
+									<a href="#" id="usermodify" class="btn btn-secondary btn-sm btn-icon icon-left">
+										修改
+									</a>
+									<a href="#" id="userdelete" class="btn btn-danger btn-sm btn-icon icon-left">
+										删除
+									</a>
+									<a href="#" id="userlist1" class="btn btn-info btn-sm btn-icon icon-left">
+										查看
+									</a></div></div>
+					<div class="panel-body">
+					<table id="userlist">
+						
+							<tr>
+								<td></td>
+							</tr>   
+						
+						
+						
+					</table>
+					<div id="userpager"></div>
+					</div>
+					<div id="userdialog">
+						
+					
+					
+					</div>

@@ -1,0 +1,90 @@
+package com.flower.hot.service.impl.zmm;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import com.flower.hot.model.zmm.CostInfoModel;
+import com.flower.hot.model.zmm.YouhuiModel;
+import com.flower.hot.service.zmm.IYouhuiService;
+@Service
+@Transactional
+public class YouhuiServiceImpl implements IYouhuiService {
+	private SessionFactory sf=null;
+	@Autowired
+	public void setSf(SessionFactory sf) {
+		this.sf = sf;
+	}
+
+	@Override
+	public void add(YouhuiModel ym) throws Exception {
+		// TODO Auto-generated method stub
+		sf.getCurrentSession().save(ym);
+
+	}
+
+	@Override
+	public void modify(YouhuiModel ym) throws Exception {
+		// TODO Auto-generated method stub
+		sf.getCurrentSession().update(ym);
+
+	}
+
+	@Override
+	public void delete(YouhuiModel ym) throws Exception {
+		// TODO Auto-generated method stub
+		sf.getCurrentSession().delete(ym);
+
+	}
+
+	@Override
+	public List<YouhuiModel> getListByAll() throws Exception {
+		// TODO Auto-generated method stub
+		return sf.getCurrentSession().createQuery("from YouhuiModel", YouhuiModel.class).getResultList();
+	}
+
+	@Override
+	public List<YouhuiModel> getListByAllWithPage(int rows, int page) throws Exception {
+		// TODO Auto-generated method stub
+		return sf.getCurrentSession().createQuery("from YouhuiModel", YouhuiModel.class).setFirstResult(rows*(page-1)).setMaxResults(rows).getResultList();
+	}
+
+	@Override
+	public YouhuiModel getYouhui(String youid) throws Exception {
+		// TODO Auto-generated method stub
+		return sf.getCurrentSession().get(YouhuiModel.class, youid);
+	}
+
+	@Override
+	public int getCountByAll() throws Exception {
+		// TODO Auto-generated method stub
+		Long lcount=sf.getCurrentSession().createQuery("select count(ym.youid) from YouhuiModel ym", Long.class).uniqueResult();
+		return lcount.intValue();
+	}
+
+	@Override
+	public int getPageCountByAll(int rows) throws Exception {
+		// TODO Auto-generated method stub
+		int count=this.getCountByAll();
+		int pageCount=0;
+		if(count%rows==0){
+			pageCount=count/rows;
+		}
+		else{
+			pageCount=count/rows+1;
+		}
+		return pageCount;
+	}
+
+	@Override
+	public List<CostInfoModel> getCostInfo(String youid) throws Exception {
+		// TODO Auto-generated method stub
+		Query<CostInfoModel> query=sf.getCurrentSession().createQuery("select cm from YouhuiModel ym inner join ym.costs cm where ym.youid=:youid",CostInfoModel.class);
+		query.setParameter("youid", youid);
+		return query.getResultList();
+	}
+
+}

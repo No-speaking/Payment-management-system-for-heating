@@ -1,0 +1,5 @@
+package com.flower.hot.service.zmm;
+
+public interface IYouhuiService {
+
+}

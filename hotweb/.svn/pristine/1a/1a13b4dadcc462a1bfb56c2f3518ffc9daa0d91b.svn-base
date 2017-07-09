@@ -1,0 +1,38 @@
+<<<<<<< .mine
+<script src="../xq/main.js"/>				
+||||||| .r92
+<script src="zmm/main.js"></script>					
+=======
+<script src="../xq/main.js"></script>					
+>>>>>>> .r95
+<div><h4 align="left" >房屋管理</h4><div align="right">
+									<a href="#" class="btn btn-secondary btn-sm btn-icon icon-left">
+										增加
+									</a>
+									<a href="#" class="btn btn-secondary btn-sm btn-icon icon-left">
+										修改
+									</a>
+									<a href="#" class="btn btn-danger btn-sm btn-icon icon-left">
+										删除
+									</a>
+									<a href="#" class="btn btn-info btn-sm btn-icon icon-left">
+										查看
+									</a></div></div>
+					<table class="table table-bordered table-striped" id="example-2">
+						<thead>
+							<tr>
+								
+								<th>房屋编号</th>
+								<th>房屋地址</th>
+								<th>房屋面积</th>
+							</tr>   
+						</thead>
+						
+						<tbody class="middle-align">
+						
+							
+							
+							
+							
+						</tbody>
+					</table>

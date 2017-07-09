@@ -1,0 +1,28 @@
+
+$(document).ready(function(){
+
+	function showlist(){
+		$.getJSON("../Headport/get/all.mvc",function(data){
+			
+			var showinfo="";
+			
+			for(var i=0;i<data.length;i++){
+				
+				showinfo=showinfo+"<tr><td>"+data[i].portno+"</td><td>"+data[i].portname+"</td><td>"+data[i].scope+"</td><td>"+data[i].portaddr+"</td><td>"+data[i].porttel+"</td></tr>";
+			}
+			
+			$("table#example-2 tbody").html(showinfo);
+			
+			
+			
+		});
+	}
+	
+	
+	showlist();
+	
+	
+	
+	
+	
+});
